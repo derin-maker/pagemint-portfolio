@@ -8,9 +8,9 @@ export default function Hero() {
           CRAFTING THE <br/><span> MODERN WEB</span>
         </h1>
         <p>
-          Clean, modern websites that dont break the bank.
+          Clean, modern websites that don't break the bank.
           We build fast, beautiful websites for small businesses across Nigeria
-          — at a price that makes sense.
+          — at an affordable price.
         </p>
         <div className="hero-btns">
           <a href="#contact" className="cta-btn">

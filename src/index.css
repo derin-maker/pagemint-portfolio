@@ -1,3 +1,4 @@
+
 /* Variables */
 :root {
   --primary: #f5c518;
@@ -5,7 +6,7 @@
   --surface: #1a1a1a;
   --text: #ffffff;
   --text-light: #a0a0a0;
-  --font-heading: "Space Grotesk", sans-serif;
+  --font-heading: "Syne", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
@@ -294,6 +295,8 @@ img {
 
 .hero-left h1 {
   color: var(--text);
+  font-family: var(--font-heading);
+  font-weight: 800;
 }
 
 .hero-left h1 span {
@@ -1166,7 +1169,8 @@ img {
     }
 
     .about-image img {
-      height: 300px;
+      height: 500px;
+      width: 400px;
     }
 
     .services {
