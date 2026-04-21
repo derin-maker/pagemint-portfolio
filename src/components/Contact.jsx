@@ -13,7 +13,7 @@ export default function Contact() {
             <span className="contact-info-icon">🕐</span>
             <div>
               <p className="contact-info-label">Response time</p>
-              <p className="contact-info-value">Under 2 hours</p>
+              <p className="contact-info-value">Under 3 hours</p>
             </div>
           </div>
           <div className="contact-info-item">
