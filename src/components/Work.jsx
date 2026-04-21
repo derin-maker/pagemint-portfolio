@@ -1,13 +1,24 @@
+import { useState } from "react";
+
 export default function Work() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filters = ["All", "Increasing Conversion", "Simplifying Complexity", "Building from Scratch"];
+
   const projects = [
     {
       name: "Blaire's Catering & Services",
       description: "A full catering website with menu, booking and testimonials.",
       image: "/blaires-mockup.png",
-      link: "https://derin-maker.github.io/blaires-catering/",
-      tags: ["HTML/CSS", "Mobile Responsive", "Calendly Integration","React"],
+      link: "https://derin-maker.github.io/blaires-catering",
+      tags: ["HTML/CSS", "Mobile Responsive", "Calendly Integration"],
+      outcome: "Building from Scratch",
     },
   ];
+
+  const filtered = activeFilter === "All"
+    ? projects
+    : projects.filter(p => p.outcome === activeFilter);
 
   return (
     <section id="work" className="work">
@@ -15,8 +26,21 @@ export default function Work() {
       <p className="work-sub" data-aos="fade-up">
         A growing portfolio of clean, purposeful websites
       </p>
+
+      <div className="work-filters" data-aos="fade-up">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            className={`filter-btn ${activeFilter === filter ? "active" : ""}`}
+            onClick={() => setActiveFilter(filter)}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
       <div className="work-grid">
-        {projects.map((project, index) => (
+        {filtered.length > 0 ? filtered.map((project, index) => (
           <div
             className="work-card"
             key={index}
@@ -32,6 +56,7 @@ export default function Work() {
               </div>
             </div>
             <div className="work-info">
+              <div className="work-outcome">{project.outcome}</div>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
               <div className="work-tags">
@@ -41,7 +66,9 @@ export default function Work() {
               </div>
             </div>
           </div>
-        ))}
+        )) : (
+          <p className="no-projects">No projects in this category yet — check back soon.</p>
+        )}
       </div>
     </section>
   );

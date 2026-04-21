@@ -9,6 +9,7 @@ import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import InProgress from "./components/InProgress";
 
 export default function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function App() {
       <About />
       <Services />
       <Work />
+      <InProgress />
       <Contact />
       <Footer />
     </div>
