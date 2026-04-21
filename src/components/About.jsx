@@ -19,7 +19,7 @@ export default function About() {
           </p>
         </div>
         <div className="about-image">
-          <img src="/derinsola.jpg" alt="Derinsola" />
+          <img src="/derin-image.jpg" alt="Derinsola" />
         </div>
       </div>
     </section>
