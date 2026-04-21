@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="hero" className="hero">
       <div className="hero-left" data-aos="fade-right">
         <h1>
-          CRAFTING THE <span> MODERN WEB</span>
+          CRAFTING THE <br/><span> MODERN WEB</span>
         </h1>
         <p>
           Clean, modern websites that dont break the bank.
